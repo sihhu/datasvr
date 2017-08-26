@@ -20,3 +20,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+# default output directories
+target/
+classes/
+deploy/
+javadoc/
+license/
+log/
+
+# IDE generated files
+.idea/
+*.iml
+
+# Jar packing
+MANIFEST.MF

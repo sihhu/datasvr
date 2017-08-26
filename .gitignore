@@ -28,6 +28,7 @@ classes/
 deploy/
 javadoc/
 license/
+log/
 
 # IDE generated files
 .idea/

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "/GetData.do")
+@WebServlet("/GetData.do")
 public class GetDataServlet extends BaseServlet {
     private static Logger log = Logger.getLogger(GetDataServlet.class);
     private static final long serialVersionUID = 1L;

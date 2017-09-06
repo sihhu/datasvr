@@ -21,7 +21,7 @@ public class DataServer {
 
         WebAppContext webAppContext = new WebAppContext();
         webAppContext.setContextPath("/");
-        webAppContext.setWar("E:/ruc_projects/github_t/datasvr/target/datasvr.war");
+        webAppContext.setWar("E:\\ruc_projects\\github_t\\datasvr\\target\\datasvr.war");
         webAppContext.setParentLoaderPriority(true);
         webAppContext.setServer(server);
         webAppContext.setClassLoader(ClassLoader.getSystemClassLoader());

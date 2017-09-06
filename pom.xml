@@ -142,6 +142,11 @@
             <version>1.7.21</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jsp</artifactId>
+            <version>9.2.19.v20160908</version>
+        </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -196,6 +201,14 @@
                 <version>2.19.1</version>
                 <configuration>
                     <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <!--<version>2.5</version>-->
+                    <webXml>web/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
             <plugin>

@@ -14,6 +14,7 @@
 
     <properties>
         <jdk.version>1.8</jdk.version>
+        <mainClass>cn.edu.hhuc.si.server.DataServer</mainClass>
         <dep.spring.version>4.2.7.RELEASE</dep.spring.version>
         <dep.junit.version>4.11</dep.junit.version>
         <dep.jackson.version>1.9.13</dep.jackson.version>
@@ -229,7 +230,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>cn.edu.hhuc.si.server.DataServer</mainClass>
+                            <mainClass>${mainClass}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -32,6 +32,7 @@ log/
 
 # IDE generated files
 .idea/
+out/
 *.iml
 
 # Jar packing

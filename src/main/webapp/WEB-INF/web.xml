@@ -43,6 +43,10 @@
         </listener-class>
     </listener>
 
+    <listener>
+        <listener-class>cn.edu.hhuc.si.service.InitDataListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>dv</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

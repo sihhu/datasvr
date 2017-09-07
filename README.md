@@ -10,6 +10,7 @@ Prepare for a simple SpringMVC-demo
 - configure `pom.xml`, including *.jar
 - add `web.xml` (applicationContext.xml & dv-servlet.xml included)
 - files in `WEB-INF/` is needed for the configuration in `dv-servlet.xml`
+- `sql files` is configured in 'resources/data.properties'(res), see `pub/Sql.zip`
 
 ## Note
 - you can input `http://127.0.0.1:8080/dv/home/index` to see the `home.jsp`, if `home.jsp` does not exist, the console will show fault for no-mapping.

@@ -31,6 +31,7 @@ For configuration of the demo, you can:
 ## Additional Readings
 - For setting springmvc, you can see [V1.0](https://github.com/taoyouxian/datasvr/tree/springmvc-demo)
 - For solving the cross-domain, you can see [V1.1](https://github.com/taoyouxian/datasvr/tree/cross-domain)
+- `datasvr/web` is not used
 
 ## Contact us
 For feedback and questions with IntelliJ IDEA building the project, feel free to email us:

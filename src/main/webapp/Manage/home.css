@@ -1,0 +1,90 @@
+body { background-color:#f3f3f3; min-width: 960px;overflow-x: hidden;margin: 0;padding: 0;font-size: 12px/1.5;  font-family: "Arial","Hiragino Sans GB","Microsoft YaHei", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif"; color: #333;background: #eee; font-size: 12px;outline: 0;}
+.webheader { position:fixed; top:0px; width:100%; min-height:120px; z-index:999} 
+.webheader .topbar{  background-color:#fff; height:40px; line-height:40px } 
+.webheader .menubar{ } 
+.webheader .menubar .logo{padding:0px ; font-size:18px} 
+.webheader .menubar .menus{} 
+.webheader .menubar .menus ul{ list-style:none; }
+.webheader .menubar .menus ul li{ list-style:none; float:left; height:80px; width:120px; line-height:80px; font-size:16px ; text-align:center}
+.webheader .menubar .menus ul li:hover{ background-color:#11b7e0; border-bottom:2px solid #f8bc40; cursor:pointer}
+.webheader .menubar .menus ul li:hover{  color:#fafafa}  
+.loginfooter {background-color:#fff;width:100%;margin:0px;}
+.loginfooter{width: 100%;min-height: 10px;}
+.loginfooter .container{ padding:10px; font-size:1.2em;} 
+#divBody{min-height: 650px; padding-top: 140px; padding-bottom: 80px;}
+/*Home Begin*/
+/*筛选条件样式*/
+/*租金*/
+.divRent {padding: 10px 0px 5px 10px;background-color: #fff;}
+.divRent .table {width: 100%;}
+.divRent table tr td {text-align: left;padding-left: 10px;}
+.divRent table tr .editor.active {font-weight:bold;color: red;}
+.divRent table tr .editor:hover {font-weight:bold;color: #444;cursor:pointer;} 
+.divRent .lab {width: 64px;text-align: center;} 
+/*厅室*/ 
+.divType {padding: 10px 0px 5px 10px;background-color: #fff;}
+.divType .table {width: 100%;}
+.divType table tr td {text-align: left;padding-left: 10px;}
+.divType table tr .editor.active {font-weight:bold;color: red;}
+.divType table tr .editor:hover {font-weight:bold;color: #444;cursor:pointer;} 
+.divType .lab {width: 64px;text-align: center;}
+/*装饰*/ 
+.divDecorate {padding: 10px 0px 5px 10px;background-color: #fff;}
+.divDecorate .table {width: 100%;}
+.divDecorate table tr td {text-align: left;padding-left: 10px;}
+.divDecorate table tr .editor.active {font-weight:bold;color: red;}
+.divDecorate table tr .editor:hover {font-weight:bold;color: #444;cursor:pointer;} 
+.divDecorate .lab {width: 64px;text-align: center;}
+/*方式*/ 
+.divRentMode {padding: 10px 0px 5px 10px;background-color: #fff;}
+.divRentMode .table {width: 100%;}
+.divRentMode table tr td {text-align: left;padding-left: 10px;}
+.divRentMode table tr .editor.active {font-weight:bold;color: red;}
+.divRentMode table tr .editor:hover {font-weight:bold;color: #444;cursor:pointer;} 
+.divRentMode .lab {width: 64px;text-align: center;}
+/*筛选条件*/
+.divSearch {padding: 10px 0px 5px 10px;background-color: #fff;border-bottom: 1px solid #dbdbdb;}
+.divSearch .table {width: 100%;}
+.divSearch table tr td {text-align: left;padding-left: 10px;} 
+.divSearch .lab {width: 64px;text-align: center;}
+/*地理位置*/
+.divFilter {padding: 15px;background-color: #fff;margin-bottom: 20px;}
+.divFilter table {width: 100%;}
+.divFilter table tr td {text-align: left;}
+.divFilter .lab {width: 64px;text-align: center;}
+.divFilter .editor {width: 130px;}
+.divFilter .editor input, select {width: 120px;} 
+/*房屋信息列表*/
+.HouseList {}
+.HouseList ul {list-style: none;float: left;padding: 0px;width: 100%;}
+.HouseList ul li {width: 100%;}
+.HouseList ul li .divItem {background-color: #fff;padding: 10px;margin-bottom: 10px;color: #999;}
+.HouseList ul li .divItem:hover {background-color: #fafafa;}
+.HouseList ul li .divItem .ImgIcon {float: left;width: 160px;height: 100px;border: 1px solid #dbdbdb;}
+.HouseList ul li .divItem .ImgIcon img {width: 160px;height: 100px;}
+.HouseList ul li .divItem .ItemContent {margin-left: 180px;height: -90px;padding: 0px;}
+.HouseList ul li .divItem .ItemContent .MasterTitle {font-size: 14px;font-weight: bold;padding-bottom: 8px;color: #444;}
+.SubInfos {height: 24px;}
+.SubInfos .InfoBlod {font-weight: bold;color: #666;}
+/*Home End*/ 
+/*Zone Begin*/ 
+ /*点击左侧之后，右侧的样式*/
+.barTitle {}
+.barTitle .activeItem {background-color: Red;color: #fff;}
+.barTitle .activeItem:hover {color: #333;}
+.barTitle .LeftIcon {background-color: #fff;border-radius: 24px;width: 24px;height: 24px;padding: 6px;margin: 8px;}
+.barTitle .LeftCaption {height: 40px;line-height: 40px;font-size: 1.2em;}
+/*用户信息*/
+.userInfo {margin-top: 10px;}    
+.userInfo .infoCaption {padding-right: 5px;text-align: right;padding-top: 2px;}
+.userInfo .infoEditor {padding-left: 5px;text-align: left;}
+.userInfo .infoEditor input, textarea {width: 100%;border: 0px solid #dbdbdb;}
+/*租房信息列表*/
+.MsgList {}
+.MsgList table {width: 100%;}
+.MsgList table tr {}
+.MsgList table tr:hover {background-color: #f4f4f4;}
+.MsgList table tr th {text-align: center;padding: 7px 5px;background-color: #efefef;border-bottom: 1px solid #dbdbdb;border-top: 1px solid #dbdbdb;}
+.MsgList table tr td {padding: 5px 5px;border-bottom: 1px dashed #dbdbdb;}
+.action:hover {cursor: pointer;font-weight: bold;}
+/*Zone End*/ 

@@ -13,7 +13,7 @@ Prepare for a simple SpringMVC-demo
 
 ## Note
 - you can input `http://127.0.0.1:8080/dv/home/index` to see the `home.jsp`, if `home.jsp` does not exist, the console will show fault for no-mapping.
-- in `cn.edu.hhuc.si.controller.DvBasicAPI`, you can see different functions for the communication.
+- in `cn.edu.hhuc.si.controller.api.BasicAPI`, you can see different functions for the communication.
 
 ## Usage
 For configuration of the demo, you can:

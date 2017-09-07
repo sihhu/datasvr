@@ -20,7 +20,7 @@ public class HomeController {
     @RequestMapping({"/index"})
     public String home() {
         log.debug("Function Info: {}", "HomeController.index");
-        return "home";
+        return "/home";
     }
 
 }

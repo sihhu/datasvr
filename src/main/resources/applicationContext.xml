@@ -12,7 +12,12 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
 http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
 
-
-	<context:annotation-config />  
+	<context:annotation-config />
+	<context:component-scan base-package="cn.edu.hhuc.si.service">
+		<context:exclude-filter type="annotation"
+								expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<bean id="infoDaoI" class="cn.edu.hhuc.si.daoImpl.InfoDaoImpl">
+	</bean>
 
 </beans>

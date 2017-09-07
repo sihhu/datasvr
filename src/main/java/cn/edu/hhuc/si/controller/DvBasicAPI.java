@@ -1,56 +1,74 @@
 package cn.edu.hhuc.si.controller;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Scanner;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
+import cn.edu.hhuc.si.common.ActionType;
+import cn.edu.hhuc.si.dao.InfoDaoI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+
+
+//@CrossOrigin(origins = "http://127.0.0.1:8080", maxAge = 3600)
 @Controller
 public class DvBasicAPI {
 
     private static Logger log = LoggerFactory.getLogger(DvBasicAPI.class);
 
+    @Autowired
+    private InfoDaoI dData;
+
     public DvBasicAPI() {
-
     }
 
-    @RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
+    @CrossOrigin
+    @RequestMapping(value = "/getData", method = RequestMethod.POST)
     @ResponseBody
-    public void fileUpload(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, InterruptedException, IOException, ServletException, SQLException {
-        log.debug("Function Info: {}", "DvBasicAPI.fileupload");
-    }
-
-    @RequestMapping(value = "/postData", method = RequestMethod.POST)
-    @ResponseBody
-    public String postData(HttpServletRequest request, HttpServletResponse response) throws InterruptedException, IOException, SQLException {
-        log.debug("Function Info: {}", "DvBasicAPI.postData");
-        return "";
-    }
-
-    @RequestMapping(value = "/getData", method = RequestMethod.GET)
-    @ResponseBody
-    public String getData(@RequestParam(value = "query") String arg) throws JsonGenerationException, JsonMappingException, IOException, InterruptedException, SQLException {
+    public String getData(HttpServletRequest request, HttpServletResponse response) throws InterruptedException, IOException, SQLException {
         log.debug("Function Info: {}", "DvBasicAPI.getData");
-        return "";
+        String aAction = request.getParameter("Action");
+        ActionType aActionType = ActionType.valueOf(aAction);
+        String aJson = "";
+        try {
+            switch (aActionType) {
+                case acExecuteSql:
+                    dData.acExecuteSql(request);
+                    break;
+                case acGetTable:
+                    dData.acGetTable(request);
+                    break;
+                case acGetDs:
+                    dData.acGetDs(request);
+                    break;
+                case acGetPageTable:
+                    dData.acGetPageTable(request);
+                    break;
+            }
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        }
+        aJson = dData.getResultJson();
+        return aJson;
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping({"/"})
+    public String home() {
+        log.debug("Function Info: {}", "HomeController.home");
+        return "/home";
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
     @ResponseBody
-    public String test(@RequestParam(value="query") String arg) {
-        return "Test successful:" + arg;
+    public String select(HttpServletRequest request, HttpServletResponse response) throws InterruptedException, IOException, SQLException {
+        log.debug("{\"age\": \"16\"}");
+        return "{\"age\": \"16\"}";
     }
-
 }

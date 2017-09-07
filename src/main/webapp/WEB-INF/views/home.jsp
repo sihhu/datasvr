@@ -34,13 +34,13 @@
         <script>
             $(document).ready(function () {
                 $.ajax({
-                    url : "<%=basePath%>dv/getData",
+                    url : "<%=basePath%>dv/test",
                     type : "POST",
                     dataType: "json",
                     timeout: 50000,
                     success : function(result) {
                         console.log(result);
-                        $(".divTop").val(result);
+                        $(".divTop").text(JSON.stringify(result));
                     },
                     error: function (a, b, c) {
                         var aResult = { State: 0, Datas: { Ea: a, Eb: b, Ec: c } };

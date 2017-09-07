@@ -30,7 +30,7 @@ public class DvBasicAPI {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/getData", method = RequestMethod.POST)
+    @RequestMapping(value = "/getData", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String getData(HttpServletRequest request, HttpServletResponse response) throws InterruptedException, IOException, SQLException {
         log.debug("Function Info: {}", "DvBasicAPI.getData");

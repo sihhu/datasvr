@@ -17,7 +17,7 @@ http://www.springframework.org/schema/jee http://www.springframework.org/schema/
     <!-- 启用Spring基于annotation的DI, 使用户可以在Spring MVC中使用Spring的强大功能。 激活 @Required
         @Autowired,JSR 250's @PostConstruct, @PreDestroy and @Resource 等标注 -->
     <!--启用spring的一些annotation -->
-    <context:annotation-config/>
+    <mvc:annotation-driven/>
     <!-- 让Spring的applicationContext激活了对标签支持的一些生命周期的管理，所以可以识别用标签生命的bean -->
 
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器，搜寻Controller -->
@@ -75,6 +75,8 @@ http://www.springframework.org/schema/jee http://www.springframework.org/schema/
         <property name="prefix" value="/WEB-INF/views/"/><!--设置JSP文件的目录位置-->
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <bean class="cn.edu.hhuc.si.config.CorsConfigurerAdapter"></bean>
 
     <!-- springmvc文件上传需要配置的节点-->
     <!--200*1024*1024即200M resolveLazily属性启用是为了推迟文件解析，以便捕获文件大小异常 -->

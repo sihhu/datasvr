@@ -17,7 +17,8 @@
 <head>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
           name='viewport'/>
-    <script src="../statics/jQuery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="Libs/sdk/jQuery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="Libs/sdk/json.js" type="text/javascript"></script>
 
     <head>
         <title>Ajax test</title>
@@ -34,13 +35,13 @@
         <script>
             $(document).ready(function () {
                 $.ajax({
-                    url : "<%=basePath%>dv/getData",
+                    url : "<%=basePath%>dv/test",
                     type : "POST",
                     dataType: "json",
                     timeout: 50000,
                     success : function(result) {
                         console.log(result);
-                        $(".divTop").val(result);
+                        $(".divTop").text(JSON.stringify(result));
                     },
                     error: function (a, b, c) {
                         var aResult = { State: 0, Datas: { Ea: a, Eb: b, Ec: c } };

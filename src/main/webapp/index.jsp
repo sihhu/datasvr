@@ -9,5 +9,5 @@
          pageEncoding="UTF-8" %>
 
 <%
-    response.sendRedirect("Manage/home.jsp");
+    response.sendRedirect("home.jsp");
 %>
